@@ -1,10 +1,13 @@
 USE codeup_test_db;
     SELECT column3 FROM albums WHERE artist = 'Pink Floyd';
-    SELECT 'There is no album' AS 'result';
+    SELECT 'Pink Floyds albums:' AS 'result';
     SELECT column4 FROM albums WHERE name = 'Sgt. Peppers Lonely Hearts Club Band';
-    SELECT 'THIS ALBUM DOESNT HAVE 30 MIL ACTUAL SALES!' AS 'result';
+    SELECT 'The year for SPLHCB:' AS 'result';
     SELECT column6 FROM albums WHERE name = 'Nevermind';
-    SELECT 'THIS ALBUM DOESNT HAVE 30MIL' AS 'result';
+    SELECT 'here is the genre' AS 'result';
     SELECT * FROM albums WHERE release_date = BETWEEN 1990 AND 1999;
     SELECT 'THESE ALBUMS WHERE FROM THE 90s' AS 'result';
-    SELECT
+    SELECT * FROM albums WHERE sales = <20;
+    SELECT 'Albums with less than 20mil sales' AS 'result';
+    SELECT * FROM albums WHERE genre = 'Rock';
+    SELECT 'Just Rock albums because we are checking specifically' AS 'result';
