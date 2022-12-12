@@ -17,3 +17,11 @@ USE employees;
     WHERE to_date LIKE '9999-%' AND gender = 'F'
     ORDER BY dept_name;
 
+    SELECT title, COUNT(*) AS 'Total' FROM employees
+        JOIN titles
+            ON employees.emp_no = titles.emp_no
+        JOIN dept_emp
+            ON employees.emp_no = dept_emp.emp_no
+        WHERE dept_no = 'd009' AND titles.to_date LIKE '9999-%' AND dept_emp.to_date LIKE '9999-%'
+        GROUP BY title
+        ORDER BY Total DESC;
